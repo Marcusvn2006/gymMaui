@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DevQuiz.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    BackgroundColor="#CF6300"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#CF6300" StatusBarStyle="DarkContent" />
+    </ContentPage.Behaviors>
+
+    <Grid>
+        <!-- Imagem de Fundo -->
+        <Image Source="telainicial.png"
+               Aspect="AspectFill"
+               IsEnabled="False" />
+        <ScrollView>
+            <VerticalStackLayout
+                Margin="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="20">
+
+                <!-- Logo -->
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="150"
+                    Source="Logogym.png"
+                     BackgroundColor="Transparent"/>
+
+                <!-- Título -->
+                <Label
+                    Margin="30"
+                    FontAttributes="Bold"
+                    FontSize="36"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="Faça seu login"
+                    TextColor="White" />
+
+                <!-- Botão 1 -->
+                <Grid Padding="20">
+                    <Frame BackgroundColor="#19242b" CornerRadius="8" Padding="0" HasShadow="True">
+                        <HorizontalStackLayout
+                            Spacing="10"
+                            Padding="12"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <Label 
+                                     x:Name="SignIn"
+                                Text="Sign in"
+                                TextColor="#C4D2DC"
+                                FontSize="14"
+                           
+                                FontFamily="Montserrat"
+                                FontAttributes="Bold"
+                                
+                                VerticalTextAlignment="Center" />
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+
+                <!-- Botão Google -->
+                <Grid Padding="20">
+                    <Frame BackgroundColor="#19242b" CornerRadius="8" Padding="0" HasShadow="True">
+                        <HorizontalStackLayout
+                            Spacing="10"
+                            Padding="12"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <Image 
+                                Source="google.png"
+                                HeightRequest="24"
+                                WidthRequest="24"
+                                Aspect="AspectFit" />
+                            <Label 
+                                Text="Sign in With Google"
+                                TextColor="#C4D2DC"
+                                FontSize="14"
+                                FontFamily="Montserrat"
+                                FontAttributes="Bold"
+                                VerticalTextAlignment="Center" />
+                        </HorizontalStackLayout>
+                    </Frame>
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
